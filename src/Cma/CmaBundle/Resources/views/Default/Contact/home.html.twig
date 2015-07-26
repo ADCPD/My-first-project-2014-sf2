@@ -1,0 +1,27 @@
+
+<div class="span8">
+    <div class="footercontent">
+        <h4 class="footertitle">{{ contact.title }}</h4>
+        <div class="map">
+            <iframe src="{{ contact.map }}" width="245px" height="180px">	</iframe>
+
+        </div>
+        <div class="address" style="margin-left: 20px;">
+            <adresse>
+                <h5>Adresse Postale</h5>
+                <p>
+                    Adresse. {{ contact.postalAdress }}
+                    <br/>
+                    Mail. {{ contact.mail }}
+                    <br/>
+                    Portable. {{ contact.phone }}
+                    <br/>
+                    Fax. {{ contact.fax }}
+                </p>
+            </adresse>    
+
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,19 @@
+image_vitrine:
+    path:     /dashbord/cma/moyens-techniques.php_name=home
+    defaults: { _controller: CmaBundle:Image:home }
+
+image_index:
+    path:     /dashbord/cma/moyens-techniques.php_name=index
+    defaults: { _controller: CmaBundle:Image:index }
+               
+image_add:
+    path:     /dashbord/cma/moyens-techniques.php_name=add
+    defaults: { _controller: CmaBundle:Image:add }
+    
+image_edit:
+    path:     /dashbord/cma/moyens-techniques.php_name=edit_{id}
+    defaults: { _controller: CmaBundle:Image:edit }
+    
+image_drop:
+    path:     /dashbord/cma/moyens-techniques.php_name=drop_{id}
+    defaults: { _controller: CmaBundle:Image:drop }

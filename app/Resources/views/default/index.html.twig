@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--[if IE]>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<![endif]-->
+<html lang="fr">
+
+    {{ include('CmaBundle:Default:Meta/home.html.twig')}}
+
+    <div class="row" id="services">
+
+        <h4 class="portfoliotitle"> Nos services </h4>
+
+        {{ include('CmaBundle:Default:Service/home.html.twig')}}
+
+    </div>
+
+    <div class="row" id="portfolio">
+        <!-- BEGIN Portfolio -->
+      
+        {{ include('CmaBundle:Default:MoyenTechnique/home.html.twig')}}
+       
+               
+    </div>
+    <!-- END PORTFOLIO AREA -->
+
+    <!-- Portfolio Modals -->
+
+
+    <!--- END MODALS -->
+
+<!--
+    <div class="row" id="contact">
+        <div class="clients">
+            <h4 class="clientstitle">Our Clients</h4>
+            <div class="clientsitem">
+                <a href="#" rel="tooltip" class="tip" data-original-title="Default tooltip" ><img src="img/client1.jpeg" /></a>
+            </div>
+            <div class="clientsitem">
+                <img src="img/client2.png" />
+            </div>
+            <div class="clientsitem">
+                <img src="img/client3.png" />
+            </div>
+            <div class="clientsitem">
+                <img src="img/client4.png" />
+            </div>
+        </div>
+    </div>
+-->
+    <!-- END CLIENTS -->
+
+
+    <footer>
+        <div class="footerarea">
+            <div class="row">
+                {{ include('CmaBundle:Default:Contact/home.html.twig')}}
+
+                <div class="span4">
+                    <div class="footercontact">
+                        {{ include('CmaBundle:Default:Contact/sendmail.html.twig')}}
+                    </div>
+                </div>
+            </div>
+    </footer>
+
+</div>
+<p class="copyright">Copyright &copy; {{ "now"|date("Y") }}, CMA ANALYSES<p>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('a[rel=tooltip]').tooltip();
+        });
+    </script>
+</body>
+</html>

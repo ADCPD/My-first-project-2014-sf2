@@ -1,0 +1,156 @@
+ <head>
+ 
+    <meta charset="utf-8">
+    <title>{{data.title}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{data.description}}">
+    <meta name="author" content="{{data.author}}">
+
+    <!-- Bootstrap styles -->
+    <link href="{{ asset('bundles/cma/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{ asset('bundles/cma/css/bootstrap-responsive.css')}}" rel="stylesheet">
+    <!-- FancyBox style -->
+    <link rel="stylesheet" href="{{ asset('bundles/cma/css/fancybox/jquery.fancybox-buttons.css')}}">
+    <link rel="stylesheet" href="{{ asset('bundles/cma/css/fancybox/jquery.fancybox-thumbs.css')}}">
+    <link rel="stylesheet" href="{{ asset('bundles/cma/css/fancybox/jquery.fancybox.css')}}">
+
+    <!-- Template style -->
+    <link id="stylesheet" href="{{ asset('bundles/cma/css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('bundles/cma/css/slider.css') }}" rel="stylesheet">
+
+    <!-- fa icons librairy-->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+    <!--[if IE]>
+    <link href="{{ asset('bundles/cma/css/iefix.css') }}" rel="stylesheet">
+    <![endif]-->
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="{{ asset('bundles/cma/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('bundles/cma/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('bundles/cma/js/vibelander_slider.js') }}"></script>
+    <script src="{{ asset('bundles/cma/js/jquery.fancybox.pack.js') }}"></script>
+    <script src="{{ asset('bundles/cma/js/jquery.fitvids.js') }}"></script>
+
+
+    <script type="text/javascript" src="{{ asset('bundles/cma/js/cufon/cufon-yui.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('bundles/cma/js/cufon/Oswald_400.font.js') }}"></script>
+    <script type="text/javascript"  src="{{ asset('bundles/cma/js/cufon/ColaborateLight_400.font.js') }}"></script>
+
+
+    <script src="{{ asset('bundles/cma/js/custom.js') }}"></script>
+    <!--[if gte IE 9]> <script type="text/javascript"> Cufon.set('engine', 'canvas'); </script> <![endif]-->
+
+    <!--[if IE]>
+    <script type="text/javascript"> Cufon.now(); </script>
+    <![endif]-->
+</head>
+<body>
+
+
+
+<!-- BEGIN Header -->
+<header id="home">
+    <div class="container">
+                  <table width="100%" border="0">
+                 
+                    <tr>
+                        <td width="20%">
+                            <img src="http://cmanalyses.com/assets/img/logo.png" tag="logo">
+                        </td>
+                        <td width="60%"><h2 class="site_description">{{data.slogon}}</h2></td>
+                        <td width="20%">
+                            
+                            <!-- social -->
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+           
+            
+             
+    
+        
+    </div>
+</header>
+<!-- END Header -->
+<!-- BEGIN Navigation -->
+<nav>
+    <ul class="nav dropdown-menu" id="mainmenu">
+        <li class="active"><a href="#home" title="Home"><i class="fa fa-home"></i></a></li>
+        <li><a href="#services" title="Services"><i class="fa fa-cogs"></i></a></li>
+        <li><a href="#portfolio" title="Photos"><i class="fa fa-briefcase"></i></a></li>
+        
+        <li><a href="#contact" title="Contact"><i class="fa fa-envelope-o"></i></a></li>
+        
+    </ul>
+</nav>
+<!-- END Navigation -->
+
+<!-- BEGIN Main Content -->
+<div class="container">
+    <div class="row">
+        <!-- slide -->
+            <div class="span12">
+        <!-- BEGIN Slider  -->
+        <div class="slider_wrapper">
+            <div class="span8 slidercontainer">
+                
+                         {{ include('CmaBundle:Default:Slide/home.html.twig')}}
+                 
+            <!-- END Slider --> 
+            
+            <!-- BEGIN Static --
+                  <div class="static">
+                      <div class="static_content">
+                        <h1>VibeLander - The Vibe Business Landing Page</h1>
+                                <h3>This is something new and elegant.</h3>
+                                
+                                <ul class="header-benefits">
+                                    <li><i class="icon-ok icon-white"></i> Responsive Layout</li>
+                                    <li><i class="icon-ok icon-white"></i> AJAX Forms Included</li>
+                                    <li><i class="icon-ok icon-white"></i> Customizable Pricing Table</li>
+                                    <li><i class="icon-ok icon-white"></i> Integrated Contact Form </li>
+                                    <li><i class="icon-ok icon-white"></i> Integrated MailChimp and Aweber</li>
+                            </ul>   
+                            <h3> VibeLander is based on Twitter BootStrap v 2.0.x</h3>
+                         </div>
+                        </div
+                    <!-- END Static --> 
+                    
+                        
+                </div>              
+            </div>
+            <div class="slider_form span4"> 
+                <!-- BEGIN Slider Form -->
+                <div class="conversion_form">
+                    <h3 class="form_title">CMA ANALYSES<span> TUNISIE</span></h3>
+                    
+                    <p style="
+                            color: #ffffff;
+                            font-size: 14px;
+                            padding: 15px 21px 7px 21px;
+                     ">
+                         
+                             {{data.Description|raw}}
+                             
+                        <form class="form-horizontal"> 
+                         <a href="{{path('fos_user_security_login')}}">
+                            <<input type="button" name="" value="Se connecter"  class="register button primary">
+                             
+                        </a>
+                        </form> 
+                    </p> 
+                </div>  
+                <!-- END Form -->         
+            </div>
+        </div>
+     </div>
+       
+    </div>
+                

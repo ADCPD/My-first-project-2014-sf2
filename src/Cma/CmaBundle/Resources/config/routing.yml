@@ -1,0 +1,31 @@
+cma_homepage:
+    path:     /
+    defaults: { _controller: CmaBundle:Default:index }
+
+Dashbord: 
+    path:    /dashbord/cma/
+    defaults: { _controller: CmaBundle:Default:dashbord }
+
+contact:
+    resource: "@CmaBundle/Resources/config/root/contactroot.yml"
+    prefix:   /
+    
+MetaData:
+    resource: "@CmaBundle/Resources/config/root/metaroot.yml"
+    prefix:   /
+    
+Services:
+    resource: "@CmaBundle/Resources/config/root/serviceroot.yml"
+    prefix:   /
+
+Slide:
+    resource: "@CmaBundle/Resources/config/root/slideroot.yml"
+    prefix:   /
+    
+moyen_technique: 
+    resource: "@CmaBundle/Resources/config/root/Imageroot.yml"
+    prefix:   /
+    
+sendmail: 
+    resource: "@CmaBundle/Resources/config/root/sendmail.yml"
+    prefix:   /

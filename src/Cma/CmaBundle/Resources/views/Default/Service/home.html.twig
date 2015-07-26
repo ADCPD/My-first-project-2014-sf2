@@ -1,0 +1,22 @@
+<!-- BEGIN Services -->
+        <div class="servicesarea">
+            {% for entity in service %}
+            <div class="span3">
+                <div class="servicesitem">
+                    <table>
+                        <tr>
+                        <td width="30%"><img src="{{ asset(entity.getWebPath()) }}" tage="cmanalyses-service-{{entity.tag}}" width="42px"/></td>
+                        <td width="70%"><h5><center>{{entity.title}}</center></h5></td>
+                        </tr>
+                    </table>   
+                    <p >
+                        {{entity.descripton|raw}}
+                    </p>
+
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <!-- END SERVICES AREA -->

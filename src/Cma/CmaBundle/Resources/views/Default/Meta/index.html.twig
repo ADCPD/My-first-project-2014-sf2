@@ -1,0 +1,75 @@
+{% extends 'CmaBundle:Administrator:index.html.twig' %}
+
+{% block body -%}
+    <div class="row-fluid">
+        <div class="span12" style="margin-top: 5%;">
+            <section class="panel"><header class="panel-heading">
+                    Meta list : SEO
+                </header>
+                <div class="row-fluid text-small">
+                    {% if entities==null  %}
+                    <a href="{{path('meta_add')}}">
+                        <button type="button" class="btn btn-info" hidden><i class="icon-plus-sign"></i> Add Meta Data</button>
+                    </a>
+                    {% else %}  
+                        
+                    {% endif %}
+                    <div class="pull-out m-t-small">
+                        <form class="form-horizontal">
+                            {% for entity in entities %}
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    <label  class="col-sm-2 control-label" style="margin-left: 20px; text-align : left;"><strong>Slogan :</strong></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control span6" value="{{ entity.slogon }}"  >
+                                    </div>
+                                </div>
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    <label  class="col-sm-2 control-label" style="margin-left: 20px; text-align : left;"><strong>Titre de page :</strong></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control span6" value="{{ entity.title }}"  >
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    <label  class="col-sm-2 control-label" style="margin-left: 20px; text-align : left;"><strong>Meta author :</strong></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control span6" value="{{ entity.author }}"  > 
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    <label  class="col-sm-2 control-label" style="margin-left: 20px; text-align : left;"><strong>Meta keywords :</strong></label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control span6" value="{{ entity.keyword }}"  > 
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    <label class="col-sm-2 control-label" style="margin-left: 20px; text-align : left;"><strong>Enttreprise déscription :</strong></label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control span6"  >{{ entity.description }}</textarea>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom: 10px;">
+                                    <label  class="col-sm-2 control-label" style="margin-left: 20px; text-align : left;"><strong>Google Analystics script :</strong></label>
+                                    <div class="col-sm-10">
+                                        <textarea class="form-control span6"   >{{ entity.script }}</textarea>
+                                    </div>
+                                </div>
+
+
+
+                                <footer class="panel-footer"><div class="row-fluid">
+                                        <a style="margin-left: 20px;" href="{{ path('meta_edit', { 'id': entity.id }) }}">
+                                            <button type="button"><i class="fa fa-pencil-square-o"></i>
+                                                edit
+                                            </button>
+                                        </a>
+                                </footer>
+                            {% endfor %}
+                        </form>
+                        </section>
+                    </div>
+                </div>
+            {% endblock %}

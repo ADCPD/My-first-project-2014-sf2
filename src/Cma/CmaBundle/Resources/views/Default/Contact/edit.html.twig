@@ -1,0 +1,34 @@
+{% extends 'CmaBundle:Administrator:index.html.twig' %}
+
+{% block body -%}
+    <main class="main">
+        <div class="clearfix">
+            <h4>
+                <i class="icon-edit"></i>Modifier Contact </h4>
+        </div>
+        <div class="row-fluid">
+            <div class="span12">
+                <section class="panel">
+                    <form class="form-horizontal" method="POST">
+                        <div class="row-fluid">
+                            <div class="span7">
+                                
+                                {{ form(form) }}
+                                
+                                <div class="control-group">
+                                    <div class="controls" style="margin-top:20px; ">                      
+                                        <a href="{{ path('contact_index') }}" style="float: right;"><button  type="submit" class="btn btn-white">Cancel</button></a>
+                                        <button type="submit" class="btn btn-primary" style="float: left;">Save</button>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </main>   
+
+ 
+{% endblock %}

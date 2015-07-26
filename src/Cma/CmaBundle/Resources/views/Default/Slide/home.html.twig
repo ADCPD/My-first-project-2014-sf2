@@ -1,0 +1,36 @@
+<div class="slider">
+    <div id="myCarousel" class="carousel slide">
+        <!-- Carousel items -->
+
+
+        <div class="carousel-inner">
+            <!--
+            {#% for entity in slide %}
+                 <div class=" item {{ entity.title }}">
+                     <img src="{{ asset(entity.getWebPath()) }}" alt="cmanalyses-tunisie-{{ entity.title }}-{{ entity.id }}" width="725px" height="415px">       
+                 </div>
+                 
+            {% endfor %#}       
+            -->
+            {% for entity in slide1 %}
+                <div class="active item slide1">
+                    <img src="{{ asset(entity.getWebPath()) }}" alt="cmanalyses-tunisie-{{ entity.title }}-{{ entity.id }}" width="725px" height="415px">       
+                </div>
+            {% endfor %}
+            {% for entity in slide2 %}
+                <div class="item slide2">
+                    <img src="{{ asset(entity.getWebPath()) }}" alt="cmanalyses-tunisie-{{ entity.title }}-{{ entity.id }}" width="725px" height="415px">       
+                </div>
+            {% endfor %}
+            {% for entity in slide3 %}
+                <div class="item slide3">
+                    <img src="{{ asset(entity.getWebPath()) }}" alt="cmanalyses-tunisie-{{ entity.title }}-{{ entity.id }}" width="725px" height="415px">       
+                </div>
+            {% endfor %}
+
+        </div>
+
+        <!-- Carousel nav -->
+        <a class="carousel-control left_prev" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+        <a class="carousel-control right_next" href="#myCarousel" data-slide="next">&rsaquo;</a>
+    </div>

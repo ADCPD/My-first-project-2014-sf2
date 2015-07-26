@@ -1,0 +1,4 @@
+services:
+#    cma.example:
+#        class: Cma\CmaBundle\Example
+#        arguments: [@service_id, "plain_value", %parameter%]

@@ -1,0 +1,24 @@
+meta_vitrine:
+    path:     /dashbord/cma/meta.php_name=home
+    defaults: { _controller: CmaBundle:Meta:home }
+    methods:   GET
+    
+meta_index:
+    path:     /dashbord/cma/meta.php_name=index
+    defaults: { _controller: CmaBundle:Meta:index }
+    methods:   GET
+
+meta_add:
+    path:     /dashbord/cma/meta.php_name=add
+    defaults: { _controller: CmaBundle:Meta:add }
+     
+    requirements:
+        id: \d+ 
+             
+meta_edit:
+    path:     /dashbord/cma/meta.php_name=edit_{id}
+    defaults: { _controller: CmaBundle:Meta:edit }
+    
+#meta_drop:
+#    path:     /dashbord/cma/contact.php_name=drop
+#    defaults: { _controller: CmaBundle:meta:drop }

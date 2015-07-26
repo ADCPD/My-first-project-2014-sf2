@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>CMA ANALYSES TUNISIE - DASHBORD </title>
+        <meta name="description" content="mobile first, app, web app, responsive, admin dashboard, flat, flat ui">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <link rel="stylesheet" type="text/css" href="{{asset('bundles/cmadmin/css/style.css')}}">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!--[if lt IE 9]>
+            <script src="{{ asset('bundles/cmadmin/js/respond.min.js')}}"></script>
+            <script src="{{ asset('bundles/cmadmin/js/html5.js')}}"></script>
+            <script src="{{ asset('bundles/cmadmin/js/excanvas.js')}}"></script>
+          <![endif]-->
+    </head>
+    <body>
+        <!-- header -->
+        <header id="header" class="navbar navbar-sm bg bg-black"><ul class="nav navbar-nav navbar-avatar pull-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">      
+                        <span class="hidden-sm-only" ><strong >{{username}}</strong></span>
+                        <b class="caret hidden-sm-only"></b>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Settings</a></li>
+                        <li><a href="{{ path('fos_user_profile_show')}}">Profile</a></li>
+
+                        <li class="divider">
+                        <li><a href="mailto:dhaouadi.amir@gmail.com">Demander de l'aide !</a></li>
+                        <li><a href="{{path('fos_user_security_logout')}}">Déconnexion</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a class="navbar-brand" href="#">CMA ANALYSES TUNISIE</a>
+            <button type="button" class="btn btn-link nav-toggle pull-left hidden-desktop" data-toggle="class:show" data-target="#nav">
+                <i class="icon-reorder icon-xlarge text-default"></i>
+            </button>
+            <ul class="nav navbar-nav hidden-phone">
+               
+                <li class="dropdown shift" data-toggle="shift:appendTo" data-target=".nav-primary .nav">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-xlarge visible-phone visible-sm-inline"></i>Settings <b class="caret hidden-sm-only"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="#" data-toggle="class:navbar-fixed" data-target="body">Navbar 
+                                <span class="text-active">auto</span>
+                                <span class="text">fixed</span>
+                            </a>
+                        </li>
+                        <li class="visible-lg">
+                            <a href="#" data-toggle="class:nav-vertical" data-target="#nav">Nav 
+                                <span class="text-active">vertical</span>
+                                <span class="text">horizontal</span>
+                            </a>
+                        </li>
+                        <li class="divider hidden-phone">
+                        <li class="nav-header">Colors</li>
+                        <li>
+                            <a href="#" data-toggle="class:bg bg-black" data-target=".navbar">Navbar 
+                                <span class="text">white</span>
+                                <span class="text-active">inverse</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-toggle="class:bg-light" data-target="#nav">Nav 
+                                <span class="text">inverse</span>
+                                <span class="text-active">light</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+
+        </header><!-- / header -->
+
+        <!-- nav -->
+        <nav id="nav" class="nav-primary visible-desktop nav-vertical bg-light">
+            <ul class="nav">
+                <li>
+                    <a href="{{path('Dashbord')}}" class="active"><i class="icon-dashboard icon-xlarge"></i>Dashboard</a>
+                </li>
+
+
+                <li>
+                    <a href="{{path('meta_index')}}"><i class="fa fa-globe fa-4x"></i>Page SEO</a>
+                </li>
+
+                <li class="dropdown-submenu">
+                    <a><i class="fa fa-picture-o fa-3x"></i>Pages Media</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{path('slider_index')}}">Gestion des Slides</a></li>
+                        <li><a href="{{path('image_index')}}">Moyens Techniques</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="{{path('Service_index')}}"><i class="fa fa-briefcase fa-3x"></i>Page Services</a>
+                </li>
+
+                <li>
+                    <a href="{{path('contact_index')}}"><i class="fa fa-compass fa-3x"></i>Page Contact</a>
+                </li>
+
+
+            </ul>
+        </nav><!-- / nav -->
+
+        <section id="content">
+            <main class="main">
+                {% block body %}
+
+                {% endblock %}
+            </main>
+        </section>
+
+
+        <!-- footer -->
+        <footer id="footer">
+            <div class="text-center padder clearfix">
+                <p>
+                    <small>&copy; CMA ANALYSES TUNISIE {{ "now"|date("Y") }}</small><br><br><a href="#" class="btn btn-mini btn-circle btn-twitter"><i class="icon-twitter"></i></a>
+                    <a href="#" class="btn btn-mini btn-circle btn-facebook"><i class="icon-facebook"></i></a>
+                    <a href="#" class="btn btn-mini btn-circle btn-gplus"><i class="icon-google-plus"></i></a>
+                </p>
+            </div>
+        </footer><!-- / footer --><!-- Bootstrap --><!-- app --><!-- Sparkline Chart --><!-- Easy Pie Chart --><script src="{{asset('bundles/cmadmin/js/app-js.v1.js')}}"></script>
+    </body>
+</html>

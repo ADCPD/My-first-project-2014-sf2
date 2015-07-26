@@ -1,0 +1,25 @@
+Service_vitrine:
+    path:     /dashbord/cma/services.php_name=home
+    defaults: { _controller: CmaBundle:Service:home }
+    methods:   GET
+    
+Service_index:
+    path:     /dashbord/cma/services.php_name=index
+    defaults: { _controller: CmaBundle:Service:index }
+    methods:   GET
+
+Service_add:
+    path:     /dashbord/cma/services.php_name=add
+    defaults: { _controller: CmaBundle:Service:add } 
+    requirements:
+        id: \d+ 
+             
+Service_edit:
+    path:     /dashbord/cma/services.php_name=edit_{id}
+    defaults: { _controller: CmaBundle:Service:edit }
+    requirements:
+        id:  \d+
+    
+#meta_drop:
+#    path:     /dashbord/cma/services.php_name=drop
+#    defaults: { _controller: CmaBundle:meta:drop }

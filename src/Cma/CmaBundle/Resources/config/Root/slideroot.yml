@@ -1,0 +1,19 @@
+slider_vitrine:
+    path:     /dashbord/cma/slider.php_name=home
+    defaults: { _controller: CmaBundle:Slide:home }
+
+slider_index:
+    path:     /dashbord/cma/slider.php_name=index
+    defaults: { _controller: CmaBundle:Slide:index }
+               
+slider_add:
+    path:     /dashbord/cma/slider.php_name=add
+    defaults: { _controller: CmaBundle:Slide:add }
+    
+slider_edit:
+    path:     /dashbord/cma/slider.php_name=edit_{id}
+    defaults: { _controller: CmaBundle:Slide:edit }
+    
+slider_drop:
+    path:     /dashbord/cma/slider.php_name=drop_{id}
+    defaults: { _controller: CmaBundle:Slide:drop }

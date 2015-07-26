@@ -1,0 +1,71 @@
+{% extends 'CmaBundle:Administrator:index.html.twig' %}
+
+{% block body %}
+    <div class="row-fluid">
+        <div class="span12" style="margin-top: 5%;">
+            <section class="panel"><header class="panel-heading">
+                    Service list : 
+                </header>
+                <div class="row-fluid text-small">
+                    <a href="{{path('Service_add')}}">
+                        <button type="button" class="btn btn-info"><i class="icon-plus-sign"></i> Add Services Data</button>
+                    </a>
+                        <p style="color:red;"><strong>* Veuillez à ne pas depasser 4 services</strong></p>
+                    <div class="pull-out m-t-small">
+                        <table class="table table-striped b-t text-small">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>File</th>
+                                    <th>Title</th>
+                                    <th>Description</th>
+                                    <th>Tag</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for entity in service %}
+                                    <tr>
+                                        <td>{{ entity.id }}</a></td>
+                                        <td><img src="{{ asset(entity.getWebPath()) }}" tag="{{ entity.tag }}" width="32px" /></td>
+                                        <td>{{ entity.title }}</td>
+                                        <td>{{ entity.descripton }}</td>
+                                        <td>{{ entity.tag }}</td>
+
+
+
+
+                                        <td>
+
+                                            <a href="{{ path('Service_edit', { 'id': entity.id }) }}"><button type="button"><i class="fa fa-pencil-square-o"></i>
+                                                    edit</button></a>
+
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                    <footer class="panel-footer"><div class="row-fluid">
+
+                            <div class="span4 text-center">
+                                <small class="text-muted inline m-t-small m-b-small">showing 20-30 of 50 items</small>
+                            </div>
+                            <div class="span4 text-right text-center-sm">
+                                <div class="pagination pagination-small  m-b-none">    
+                                    <ul>
+                                        <li><a href="#"><i class="icon-chevron-left"></i></a></li>
+                                        <li><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">3</a></li>
+                                        <li><a href="#">4</a></li>
+                                        <li><a href="#">5</a></li>
+                                        <li><a href="#"><i class="icon-chevron-right"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </footer></section>
+        </div>
+    </div>
+{% endblock %}

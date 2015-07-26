@@ -1,0 +1,16 @@
+{% extends "FOSUserBundle::layout.html.twig" %}
+
+{% block fos_user_content %}
+	<section id="content">
+  		<div class="row-fluid">
+   		   <div class="span4 offset4 m-t-large">
+       		 <section class="panel">
+        		<header class="panel-heading text-center">
+           		 Recuperez votre mot de passe !
+          		</header>
+{% include "FOSUserBundle:Resetting:request_content.html.twig" %}
+</section>
+   		 </div>
+   	 </div>
+</section>
+{% endblock fos_user_content %}

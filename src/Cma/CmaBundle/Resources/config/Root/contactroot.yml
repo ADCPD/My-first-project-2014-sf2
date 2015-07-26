@@ -1,0 +1,16 @@
+contact_vitrine:
+    path:     /dashbord/cma/contact.php_name=home
+    defaults: { _controller: CmaBundle:Contact:home }
+
+contact_index:
+    path:     /dashbord/cma/contact.php_name=index
+    defaults: { _controller: CmaBundle:Contact:index }
+               
+contact_edit:
+    path:     /dashbord/cma/contact.php_name=edit_{id}
+    defaults: { _controller: CmaBundle:Contact:edit }
+    
+
+contact_drop:
+    path:     /dashbord/cma/contact.php_name=drop
+    defaults: { _controller: CmaBundle:Contact:drop }
