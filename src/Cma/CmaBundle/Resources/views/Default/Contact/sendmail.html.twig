@@ -1,8 +1,8 @@
 <h3>Nous contactez</h3>
-<form class="form-horizontal" action="{{path('sendmail_send')}}" methode="POST">
+<form class="form-horizontal" action="{{asset('bundles/sendmailer.php')}}" methode="POST">
     
     <input type="text" class="email form_field" id="email" placeholder="Email" name="email"/>
-    <input type="text" id="name" class="form_field" placeholder="Votre nom et prénom" name="Subject" />
+    <input type="text" id="name" class="form_field" placeholder="Votre nom et prénom" name="nom" />
     <textarea rows="5" id="contact_text" class="form_field" placeholder="Votre message ici !" name="message"></textarea>
     <button type="submit" class="register button primary sendmail" data-loading-text="Sending mail...">Send<i class="icon-white icon-chevron-right"></i></button>
 </form>

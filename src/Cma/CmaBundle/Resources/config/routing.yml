@@ -26,6 +26,4 @@ moyen_technique:
     resource: "@CmaBundle/Resources/config/root/Imageroot.yml"
     prefix:   /
     
-sendmail: 
-    resource: "@CmaBundle/Resources/config/root/sendmail.yml"
-    prefix:   /
+ 

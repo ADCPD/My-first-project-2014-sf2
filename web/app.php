@@ -5,12 +5,12 @@ use Symfony\Component\HttpFoundation\Request;
 
 $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
 
-// Enable APC for autoloading to improve performance.
-// You should change the ApcClassLoader first argument to a unique prefix
-// in order to prevent cache key conflicts with other applications
-// also using APC.
+// Use APC for autoloading to improve performance.
+// Change 'sf2' to a unique prefix in order to prevent cache key conflicts
+// with other applications also using APC.
+
 /*
-$apcLoader = new ApcClassLoader(sha1(__FILE__), $loader);
+$apcLoader = new ApcClassLoader('sf2', $loader);
 $loader->unregister();
 $apcLoader->register(true);
 */
