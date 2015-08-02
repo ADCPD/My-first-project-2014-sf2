@@ -25,5 +25,9 @@ Slide:
 moyen_technique: 
     resource: "@CmaBundle/Resources/config/root/Imageroot.yml"
     prefix:   /
+
+certificat:
+    resource: "@CmaBundle/Resources/config/root/certificatroot.yml"
+    prefix:   /
     
  

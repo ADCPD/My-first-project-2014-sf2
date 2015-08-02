@@ -91,11 +91,16 @@
                         <li><a href="{{path('image_index')}}">Moyens Techniques</a></li>
                     </ul>
                 </li>
-
-                <li>
-                    <a href="{{path('Service_index')}}"><i class="fa fa-briefcase fa-3x"></i>Page Services</a>
+                
+                 <li class="dropdown-submenu">
+                    <a><i class="fa fa-briefcase fa-3x">Page Services</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{path('Service_index')}}">Gestion des services</a></li>
+                        <li><a href="{{path('certificat_index')}}">Nos certificats</a></li>
+                    </ul>
                 </li>
 
+                 
                 <li>
                     <a href="{{path('contact_index')}}"><i class="fa fa-compass fa-3x"></i>Page Contact</a>
                 </li>

@@ -1,0 +1,20 @@
+certificat_vitrine:
+    path:     /dashbord/cma/certificat.php_name=home
+    defaults: { _controller: CmaBundle:Certification:home }
+
+certificat_index:
+    path:     /dashbord/cma/certificat.php_name=index
+    defaults: { _controller: CmaBundle:Certification:index }
+               
+certificat_add:
+    path:     /dashbord/cma/certificat.php_name=add
+    defaults: { _controller: CmaBundle:Certification:add }
+
+certificat_edit:
+    path:     /dashbord/cma/certificat.php_name=edit_{id}
+    defaults: { _controller: CmaBundle:Certification:edit }
+    
+
+certificat_drop:
+    path:     /dashbord/cma/certificat.php_name=drop_{id}
+    defaults: { _controller: CmaBundle:Certification:drop }

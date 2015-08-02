@@ -52,6 +52,9 @@ $query3 = $em->createQuery(
                  FROM CmaBundle:Slide S 
                  Where S.id=3'
 );
+$query4 = $em->createQuery(
+'SELECT C FROM CmaBundle:Certificat C '
+);
 /*
  *  recuperer tout les images pour la section  moyens techniques
  */
@@ -65,12 +68,12 @@ $contact = $Contactdata->getSingleResult();
 $meta = $Metadata->getSingleResult();
 
 $slide = $Slidedata->getSingleResult();
-
+$entities = $query4->getResult();
 
 return $this->render('CmaBundle:Default:index.html.twig',
  array('data' => $meta, 'contact' => $contact, 'service' => $service,
  'slide' => $slide, 'slide1' => $slide1, 'slide2' => $slide2, 'slide3' => $slide3,
- 'images' => $images));
+ 'images' => $images,'entities' => $entities));
 
 }
 

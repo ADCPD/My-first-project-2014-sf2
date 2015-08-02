@@ -1,7 +1,6 @@
 {% extends 'CmaBundle:Administrator:index.html.twig' %}
 
-
-{% block body %}
+{% block body -%}
     <div class="row-fluid">
         <div class="span12" style="margin-top: 5%;">
             <div class="span12">
@@ -9,49 +8,48 @@
                         Liste des slides :
                     </header>
                     <div class="row-fluid text-small">
-
-                        <a href="{{path('slider_add')}}">
-                            <button type="button" class="btn btn-info"><i class="icon-plus-sign"></i> Ajouter un slide</button>
+                        <a href="{{path('certificat_add')}}">
+                            <button type="button" class="btn btn-info"><i class="icon-plus-sign"></i> Ajouter une certificat</button>
                         </a>
 
                         <div class="pull-out m-t-small">
                             <table class="table table-striped b-t text-small">
                                 <thead>
                                     <tr>
-                                        <th width="10px">Id</th>
-                                        <th>Image</th>
-                                        <th>Title</th> 
+                                        <th>Id</th> 
+                                        <th>Description</th> 
                                         <th>Tag</th>
-                                        <th width="200px">Actions</th>
+                                        <th>Certificat</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {% for entity in slide %}
+                                    {% for entity in certficat%}
                                         <tr>
                                             <td>{{ entity.id }}</td>
                                             <td>{{ entity.title }}</td>
-                                            <td><img src="{{ asset(entity.getWebPath()) }}" tag="{{ entity.tag }}" width="150px" /></td>
-                                            <td>{{ entity.tag }}</td>
+                                            <td>{{ entity.description }}</td>  
                                             <td>
-                                                <a href="{{ path('slider_edit', { 'id': entity.id }) }}">
+                                                <img src="{{ asset(entity.getWebPath()) }}" width="100px"/></td>
+                                            <td>
+                                               <a href="{{ path('certificat_edit', { 'id': entity.id }) }}">
                                                     <button type="button"><i class="fa fa-pencil-square-o red"></i>modifier</button>
                                                 </a>
-                                                <a href="{{ path('slider_drop', { 'id': entity.id }) }}">
+                                                <a href="{{ path('certificat_drop', { 'id': entity.id }) }}">
                                                     <button type="button"><i class="fa fa-times"></i>effacer</button>
-                                                </a>
-                                                    
-
+                                                </a> 
                                             </td>
                                         </tr>
                                     {% endfor %}
                                 </tbody>
                             </table>
                         </div>
-                         
                 </section>
             </div>
 
         </div>
     </div>
+
+
 
 {% endblock %}
